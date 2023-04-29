@@ -1,0 +1,53 @@
+<form class="container">
+  <input
+    type="text"
+    class="texting"
+    placeholder="Producto"
+    [(ngModel)]="product.name"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <input
+    type="text"
+    class="texting"
+    placeholder="Descripcion"
+    [(ngModel)]="product.description"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <div class="conten">
+    <div class="contenid">
+      <label for="" class="texting">Cantidad</label>
+      <br>
+      <input
+        type="number"
+        class="number"
+        [(ngModel)]="product.amount"
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+    <div class="contenid">
+      <label class="texting">$Precio</label>
+      <br>
+      <input
+        type="number"
+        class="number"
+        [(ngModel)]="product.price"
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+  </div>
+
+  <select
+    [(ngModel)]="product.departament"
+    [ngModelOptions]="{ standalone: true }"
+
+  >
+    <option value="Snaks">Snaks</option>
+    <option value="Hogar">Hogar</option>
+    <option value="Panaderia">Panaderia</option>
+    <option value="Carniceria">Carniceria</option>
+    <option value="Comestibles">Comestibles</option>
+  </select>
+  <button class="click" (click)="addProduct(product)">Añadir</button>
+
+  <br />
+</form>

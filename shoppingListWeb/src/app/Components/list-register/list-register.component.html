@@ -1,0 +1,28 @@
+<div class="container">
+  <div *ngIf="variable == true">
+    <h3 class="total">${{ calculateTotal() }}</h3>
+  </div>
+  <div
+    class="container__product"
+    *ngFor="let product of products; let indice = index"
+  >
+    <h2 class="title">{{ product.name }}</h2>
+    <p class="text">
+      {{ product.description }}
+    </p>
+    <p class="text">
+      {{ product.departament }}
+    </p>
+    <p class="text">
+      {{ product.amount }}
+    </p>
+    <p class="text">${{ product.price }}</p>
+    
+    <button class="click" (click)="AddProduct(product)">+</button>
+    <button class="click" (click)="substracProduct(product, indice)">-</button>
+
+    <button class="click" (click)="shoppingProduct(product)">
+      {{ variable ? "Comprado" : "Comprar" }}
+    </button>
+  </div>
+</div>
