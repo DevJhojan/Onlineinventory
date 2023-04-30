@@ -1,6 +1,6 @@
 <div class="container">
-  <div *ngIf="variable == true">
-    <h3 class="total">${{ calculateTotal() }}</h3>
+  <div class="container__total">
+    <h3 >${{ calculateTotal() }}</h3>
   </div>
   <div
     class="container__product"
@@ -10,18 +10,18 @@
     <p class="text">
       {{ product.description }}
     </p>
-    <p class="text">
+    <p class="text__center text">
       {{ product.departament }}
     </p>
-    <p class="text">
+    <p class="number">
       {{ product.amount }}
     </p>
-    <p class="text">${{ product.price }}</p>
-    
+    <p class="number">${{ product.price }}</p>
+
     <button class="click" (click)="AddProduct(product)">+</button>
     <button class="click" (click)="substracProduct(product, indice)">-</button>
 
-    <button class="click" (click)="shoppingProduct(product)">
+    <button class="click__tall click" (click)="shoppingProduct(product)">
       {{ variable ? "Comprado" : "Comprar" }}
     </button>
   </div>

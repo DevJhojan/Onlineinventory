@@ -4,21 +4,25 @@
     *ngFor="let product of products; let indice = index"
   >
     <h2 class="title">{{ product.name }}</h2>
-    <p class="text">
+    <p class="text__center text">
       {{ product.departament }}
     </p>
     <p class="text">
       {{ product.description }}
     </p>
-    <p class="text">
+    <p class="number">
       {{ product.amount }}
     </p>
-    <p class="text">${{ product.price }}</p>
-    <div  >
+    <p class="number">${{ product.price }}</p>
+    <div>
       <button class="click" (click)="shoppingProduct(product)">Añadir</button>
-      <button class="click" (click)="DeleteProduct(product, indice)">Eliminar</button>
-      <button class="click" (click)="DeleteProductAll(indice)">Eliminar Producto</button>
+      <button class="click" (click)="DeleteProduct(product, indice)">
+        Eliminar
+      </button>
+      <button class="click__tall click" (click)="DeleteProductAll(indice)">
+        Eliminar Producto
+      </button>
     </div>
-
   </div>
+
 </div>
